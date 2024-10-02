@@ -17,6 +17,10 @@ html{
     box-sizing: border-box;
 }
 
+body.menu-open {
+    overflow: hidden;
+}
+
 /*utilidades*/
 .container{
     max-width: 120rem;
@@ -121,6 +125,8 @@ html{
 
 .menu li {
     list-style: none;
+    margin-bottom: .5rem;
+    align-items: center;
 }
 
 .menu a{
@@ -151,6 +157,40 @@ html{
 
 .menu a:hover{
     color: #e2e2e2;
+}
+
+.menu-close {
+    display: none;
+}
+
+.menu-close i {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5rem;
+    margin: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.menu-close i:hover{
+    color: var(--dark);
+}
+
+.menu.open {
+    display: grid;
+    position: absolute;
+    top: 9%;
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--primary);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(0);
+    z-index: 100;
+    overflow-y: auto;
 }
 
 .search-form{
@@ -669,7 +709,7 @@ html{
     text-transform: uppercase;
     font-size: 1.4rem;
     border-radius: 2rem;
-    margin: 3rem 0 5rem;
+    margin: 0.5rem auto;
     display: inline-block;
     cursor: pointer;
 }
@@ -870,11 +910,53 @@ html{
 		display: block;
 		color: #fff;
 		font-size: 3rem;
+        cursor: pointer;
 	}
 
 	.menu {
 		display: none;
 	}
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%); 
+        overflow: auto;
+    }
+
+    .menu li {
+        list-style: none;
+        margin: 2.2rem -2rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .menu .open {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%); 
+        overflow: auto;
+    }
+
+    .menu-close {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+    }
 
 	.content-banner {
 		max-width: 50rem;
