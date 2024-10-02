@@ -180,7 +180,7 @@ body.menu-open {
 .menu.open {
     display: grid;
     position: absolute;
-    top: 9%;
+    top: 10%;
     left: 0;
     width: 50%;
     height: 100vh;
