@@ -180,7 +180,7 @@ body.menu-open {
 .menu.open {
     display: grid;
     position: absolute;
-    top: 7.5%;
+    top: 8%;
     left: 0;
     width: 50%;
     height: 100vh;
@@ -807,7 +807,7 @@ body.menu-open {
 }
 
 .twitter{
-    background-color: #50acee;
+    background-color: #000000;
 }
 
 .instagram{
@@ -1015,16 +1015,41 @@ body.menu-open {
 		height: 52rem;
 	}
 
-	.menu-footer {
-		grid-template-columns: repeat(1, 1fr);
-	}
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        gap: 2rem;
+    }
 
-	.copyright {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1.5rem;
-	}
+    .menu-footer {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: start;
+        text-align: start;
+    }
+
+	
+    .contact-info, .information, .my-acount, .newletter {
+        align-items: start;
+    }
+
+    .contact-info ul, .information ul, .my-acount ul {
+        display: block;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .copyrigth {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+    }
 }
 
 
@@ -1110,19 +1135,26 @@ body.menu-open {
 		font-size: 1.8rem;
 	}
 
-	.contact-info ul,
-	.information ul,
-	.my-account ul{
-		display: none;
-	}
+    .container-footer {
+        padding: 1rem;
+        gap: 1.5rem; 
+    }
 
-	.contact-info {
-		align-items: center;
-	}
+    .menu-footer {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
 
-	.menu-footer{
-		grid-template-columns: 1fr;
-	}
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .contact-info ul, 
+    .information ul, 
+    .my-account ul {
+        display: block;
+        text-align: start;
+    }
 
 	.content p{
 		font-size: 1.6rem;
