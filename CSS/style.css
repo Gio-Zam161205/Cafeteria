@@ -1016,7 +1016,8 @@ body.menu-open {
 	}
 
 	.menu-footer {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
 	}
 
 	.copyright {
@@ -1024,6 +1025,7 @@ body.menu-open {
 		justify-content: center;
 		align-items: center;
 		gap: 1.5rem;
+        padding: 1rem 0;
 	}
 }
 
@@ -1127,4 +1129,8 @@ body.menu-open {
 	.content p{
 		font-size: 1.6rem;
 	}
+
+    .copyright p {
+        font-size: 1.4rem;
+    }
 }
